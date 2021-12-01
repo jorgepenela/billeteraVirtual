@@ -9,4 +9,4 @@
 <h3>Tecnologías: React, SCSS, SVG animations, Illustrator, After Effects</h3>
 
 <p><a href="https://yopitpago.com">Ver online</a></p>
-<h6>Hecho por Anarketing SRL Argntina</h6>
+<h6>Hecho por Anarketing SRL Argentina</h6>
