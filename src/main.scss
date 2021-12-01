@@ -1,0 +1,845 @@
+@import url(./locomotive.css);
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+// colours
+
+$green : #00d382;
+$blue :  #0037b2;
+$gray : #f2f5fb;
+
+// type
+@import url(./benton/stylesheet.css);
+*{
+    font-family: 'bentonsans_lightregular', 'Lato', sans-serif;
+    color: $blue;
+    box-sizing: border-box;
+}
+strong{
+    font-family: 'bentonsans_boldregular';
+}
+.fs1{
+    font-size: 45px;
+    line-height: 1.5em;
+}
+.fsmini{
+    font-size: 12px;
+}
+.fslegal{
+    font-size: 9px;
+    line-height: 1.5em;    
+    margin: 0px;
+}
+
+// reset
+a{
+    text-decoration: none !important;
+}
+button{
+    border: none;
+}
+// helper classes
+.stripe{
+    background: $gray;
+    padding: 50px 0px;
+    background-position: center;
+    background-size: cover;
+    &.blue{
+        background-color: $blue;
+        *{
+            color: #fff !important;
+        }
+        
+    }
+    &.trans{
+        background-color: transparent;
+    }
+}
+.cta{
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    background: $green;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff !important;
+    transition: all .5s;
+    text-transform: uppercase;
+    &:hover{
+        background: rgba(0, 189, 117, 0.7);
+    }   
+}
+
+.hlist{    
+    list-style-type: none;
+    li{
+        display: inline-block;
+    }
+}
+.descargas{
+    img{
+        width: 200px;
+        margin: 10px;
+        margin-left: 0px;
+    }
+}
+//  FancyBox custom ----------------------
+
+.fancyCustom{
+    max-width: 800px !important;    
+}
+.fancybox__backdrop{    
+    background: rgba($color: #fff, $alpha: 0.9) !important;
+}
+.fancybox__content{
+    box-shadow: 2px 2px 30px rgba($color: #000000, $alpha: 0.3);
+}
+// Header ---------------------------------
+header{
+    position: fixed;
+    z-index: 9999999999;
+    width: 100%;
+    background: $blue;
+    #logo-yopit{
+        img{
+            height: 100px;
+        }
+    }
+    nav{
+        ul{
+            display: block;
+            padding-top: 35px;
+            padding-right: 30px;            
+            li{                
+                margin-left: 100px;
+                a{
+                    color: #fff;
+                    font-family: 'Lato', sans-serif;
+                    font-weight: bold;
+                    font-size: 12px;
+                    letter-spacing: 1px;
+    
+                }
+            }
+        }
+    }    
+}
+
+// sections -----------------------
+#home{
+    
+    padding-top: 150px;
+    .stripe{
+        height: 500px;
+        padding-top: 15vh;
+        background-position: right center;
+        position: relative;
+    }
+    *{
+        color: #fff;
+        line-height: 1.5em;
+    }
+    .smartphone{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-45%);
+        height:700px;
+    }
+    #typed{
+        font-family: 'bentonsans_boldregular';
+    }
+}
+
+#metodos{    
+    padding-top: 140px;
+    h3{margin-bottom: 50px;}    
+    .metodo{        
+        padding: 10px 50px;        
+        width: 200px;        
+        a{
+            //cursor: pointer;
+            cursor: auto;
+            display: block;   
+            position: relative;         
+            padding-bottom: 50px;            
+            min-height: 287px;
+            img{
+                width: 200px;
+            }
+            span{
+                
+                font-size: 20px;
+                display: block;
+                width: 150px;            
+                margin: 0 auto;
+            }
+            .proximamente{
+                display: inline-block;
+                color: #333;
+                border: solid thin;
+                border-radius: 7px;
+                font-size: 7px;
+                font-family: 'Lato', sans-serif;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                padding: 5px 10px;
+                position: absolute;
+                
+                top: 0px;
+                right: 0px;
+            }
+        }
+        &::after{            
+            content: "";
+            // display: block;
+            display: none;
+            width: 100%;
+            height: 50px;
+            background-image: url(./bks/sombra.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-top: -20px;            
+        }
+        
+    }
+    
+}
+
+#atencion{
+    padding: 100px 0px;   
+    padding-top: 100px;     
+    position: relative;
+    .stripe{
+        position: relative;        
+        padding: 50px 0px;
+        overflow: hidden;
+        h3{
+            position: relative;
+            z-index:999 ;                                
+        }
+        #animacion{            
+            position: absolute;
+            width: 500px;            
+        }
+    }
+    .mis-atencion{
+        width: 150px;
+        height: 250px;
+        position: absolute;
+        z-index: 5;            
+        top: 50px;
+        right: 100px;
+    }
+       
+}
+#servicios{
+    padding-bottom: 100px;
+    padding-top: 100px;
+    .stripe{
+        background-image: url(./bks/mis-servicios.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right bottom;        
+        padding: 100px 0px;
+        margin-bottom: 100px;
+    }
+    .bigBlue{
+        display: block;
+        margin: 0 auto;
+        background-color: $blue;
+        font-size: 2em;
+        letter-spacing: 6px;
+        padding: 15px 40px;
+        border-radius: 120px;
+        margin-top: 30px;
+        margin-bottom: -80px;
+    }
+    #franjaVerdeBox{
+        position: relative;
+        height: 00px;        
+        z-index: -1;
+        #franjaVerde{
+            background-color: $green;        
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: block;
+            width: 100%;
+            height: 300px;                                   
+        }
+    }   
+    .serv{
+        img{
+            height: 200px;
+            margin: 50px 0px;
+        }
+        div{            
+            padding: 10px 20px;
+            position: relative;
+            font-size: 20px;
+            ::after{
+                content: '';
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 2px;
+                height: 30px;
+                background-color: $blue;
+            }
+        }
+    } 
+}
+#video{
+    background-color: $blue;
+    text-align: center;
+    margin: 100px 0px;
+    video{       
+        width: 700px; 
+        height: 700px;
+    }
+}
+#funcionalidades{
+    margin-bottom: 100px;
+    padding-top: 100px;
+    .stripe{
+        padding: 0px;
+        background-image: url(./bks/conejo.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+    }
+    .funcText{
+        h2{
+            margin-bottom: 50px;
+        }
+        padding: 100px 50px ;
+        
+        li{
+            list-style-type: none;
+            font-size: 1.5em;
+            margin-bottom: 20px;  
+            &::before{
+                content: "";
+                display: inline-block;
+                margin-right: 20px;
+                vertical-align: middle;
+                width: 30px;
+                height: 30px;                
+                background-image: url(./bks/check.svg);
+            }          
+        }
+    }
+   .func{
+       background-color: $green;
+       background-image: url(./bks/funcionalidades.svg);
+       background-size: cover;
+       overflow: hidden;
+       img{
+           width: 400px;
+           position: relative;
+           bottom: -100px;
+           left: 50%;
+           transform: translateX(-50%);
+       }
+   }
+}
+
+#contacto{
+    .stripe{
+        background-color: rgb(138,138,138);
+        background-image: url(./bks/conejo.svg);
+        background-repeat: no-repeat;
+        background-position-x: -150px;
+        background-size: 300px;
+    }
+    *{
+        color: #fff;
+    }
+    .sidebarMenu{
+        li{
+            list-style-type: none;
+            font-family: 'Lato', sans-serif;
+            line-height: 2.5em;
+            
+        }        
+    }
+    .fslegal{
+        margin-bottom: 30px;
+    }
+
+}
+footer{
+    padding: 00px 30px;
+    padding-top: 40px;
+    position: relative;
+    background-color: #fff;
+    z-index: 99999999999;
+}
+
+.cta-w{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+// RESPONSIVE ---------------------------
+.xs-hidden{
+    display: inline-block;
+}
+.xs{
+    display: none;
+}
+main{
+    width: 100%;
+    overflow-x: hidden;
+}
+/* LAPTOP 1520px --------------------------*/
+@media screen and (min-width: 1401px) and (max-width: 1600px){
+    header{
+        nav{
+            ul{
+                li{
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+    #home{
+        .stripe{
+            height: 460px;
+        }
+    }
+    #servicios{
+        .bigBlue{
+            font-size: 1.7em;
+        }
+    }
+}
+/* LAPTOP -------------------------------- */
+@media screen and (min-width: 1100px) and (max-width: 1400px){    
+    .fs1{
+        font-size: 1.7em;
+    }
+    .fs-p{
+        font-size: 16px !important;
+    }
+    .descargas{
+        a{
+            img{
+                width: 150px;
+            }            
+        }
+    }
+    header{
+        #logo-yopit{
+            img{
+                width: 200px;
+            }
+        }
+        nav{
+            ul{
+                li{
+                    margin-left: 30px;
+                    a{
+                        font-size: 10px;
+                    }
+                }
+            }            
+        }
+    }
+    #home{
+        .stripe{
+            height: 400px;
+        }
+        .fs1{
+            font-size: 30px;
+        }
+        .smartphone{
+            height: 550px;
+            right: 200px;
+        }
+    }
+    #metodos{
+        .metodo{
+            a{  
+                min-height: 250px;
+                text-align: center;
+                img{
+                    width: 170px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    #atencion{
+        .stripe{
+            padding: 95px 0px;
+            h3{
+                position: relative;
+                z-index:999 ;                                
+            }
+            #animacion{
+                
+                width: 375px;
+                position: absolute;
+                bottom: 0px;
+                left: 150px;
+
+            }
+        }
+        .mis-atencion{
+            right: 180px;
+        }
+
+    }
+    #servicios{
+        .bigBlue{
+            font-size: 20px;
+        }
+        .serv{
+            
+            img{
+                height: 130px;                
+                margin-bottom: 50px;
+            }
+            div{
+                font-size: 16px;                
+            }
+        }
+        #franjaVerdeBox{
+            #franjaVerde{
+                height: 230px;
+            }
+        }
+    }
+    #video{
+        margin-bottom: 0px;
+    }
+    #funcionalidades{
+        padding-top: 100px;
+        .funcText{   
+            padding: 75px 100px;         
+            ul{
+                padding-left: 0px;
+                li{
+                    font-size: 16px;
+                }
+            }            
+        }
+        .func{
+            height: 440px;
+            img{
+                width: 300px;
+            }
+        }
+    }
+    
+}
+/* IPAD -------------------------------- */
+
+
+@media screen and (min-width: 501px) and (max-width: 1100px){    
+    .fs1{
+        font-size: 1.7em;
+    }
+    .fs-p{
+        font-size: 16px !important;
+    }
+    .descargas{
+        a{
+            img{
+                width: 150px;
+            }            
+        }
+    }
+    #navicon{
+        background-color: transparent;
+        outline: none !important;
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        img{            
+            height: 77px;
+            padding: 25px 10px;
+        }
+    }
+    header{
+        #logo-yopit{
+            img{
+                width: 150px;
+                height: 80px;
+            }            
+        }
+        .hlist{
+            //display: none;
+            position: absolute;
+            background-color: $blue;
+            top: 80px;
+            right: -500px;
+            padding: 50px;
+            height: 100vh;
+            transition: all 1s;
+            li{
+                text-align: center;
+                display: block;
+                margin-left: 0px;
+                margin-bottom: 20px;
+                font-size: 10px;
+            }
+            &.open{
+                right: 0px;
+            }
+        }
+    }
+    #home{
+        .stripe{
+            height: 350px;
+        }
+        .smartphone{
+            height: 550px;
+            right: 9%;
+        }
+    }
+    #atencion{
+        .stripe{
+            padding: 100px 0px;
+            #animacion{
+                width: 390px;
+                bottom: 0px;
+            }
+        }
+    }
+    #servicios{
+        .bigBlue{
+            font-size: 1.5em;
+        }
+        .serv{
+            img{
+                height: 150px;
+            }
+        }
+        #franjaVerdeBox{
+            #franjaVerde{
+                height: 250px;
+            }
+        }        
+    }
+    #funcionalidades{
+        .funcText{
+            padding: 50px;            
+            ul{
+                padding-left: 0px;
+                li{
+                    font-size: 1.2em;
+                }
+            }
+        }
+        .func{
+            height: 500px;
+            img{
+                width: 300px;
+                bottom: -150px;
+            }
+        }
+    }
+}
+/* MOBILE -------------------------------- */
+@media screen and (max-width: 500px){
+    .fs1{
+        font-size: 1.5em;
+    }
+    .fs-p{
+        font-size: 16px !important;
+    }
+    .descargas{
+        a{
+            img{
+                width: 150px;
+            }            
+        }
+    }         
+    .xs-center{
+        text-align: center;
+    } 
+    .xs-hidden{
+        display: none;
+    }
+    .xs{
+        display: inline-block;
+    }   
+    #navicon{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        background-color: transparent;
+        outline: none !important;        
+        img{
+            height: 60px;
+            padding: 17px 0px;
+        }
+    }
+    
+    header{
+        z-index: 99;
+        #logo-yopit{
+            img{
+                width: 120px;
+                height: 60px;                
+            }            
+        }
+        .hlist{
+            background: linear-gradient(rgba(0, 0, 0, 0.096) 0% 0.5%, $blue 2% 100%) ;
+            margin: 0px;
+            padding: 50px 0px;            
+            position: absolute;            
+            height: 100vh;
+            transition: all 1s;
+            top: -1700px;
+            left: 0px;
+            z-index: 99999999999;
+            background-color: $blue;
+            //display: none;
+            li{
+                
+                width: 100%;
+                margin: 10px 00px;
+                padding: 0px;
+                text-align: center;                
+            }
+            &.open{
+                top: 60px;
+            }
+        }
+    } 
+    #home{
+        height: auto;
+        text-align: center;
+        padding-top: 50px;
+        .stripe{
+            padding: 40px 0px;
+            height: auto;            
+            .smartphone{
+                position: static;
+                transform: unset;
+                height: 500px;
+            }
+        }
+                
+    }
+    #metodos{
+        .metodo{
+            box-sizing: border-box;
+            padding: 10px;
+            width: 48%;            
+            margin: 1%;
+            
+            a{
+                min-height: 240px;
+                img{
+                    width: 100%;
+                }
+            }
+                        
+        }        
+    }
+    #atencion{
+        .stripe{
+            z-index: 1;
+            #animacion{
+                position: static;
+                width: 100%;
+                margin-bottom: 30px;
+                
+            }
+        }
+        .mis-atencion{
+            display: none;
+        }
+    }
+
+    #servicios{
+        padding-bottom: 0px;
+        .bigBlue{
+            font-size: 16px;
+            margin-bottom: -10  0px;
+        }
+        #franjaVerdeBox{
+            display: none;
+        }
+        .serv{
+            img{
+                height: 150px;
+                margin: 0px;
+            }
+            div{                
+                height: 100px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    #video{
+        padding: 0px;
+        background-color: none;
+        div{
+            width: 100% !important;
+            height: auto !important;            
+        }
+        
+    }
+    #funcionalidades{
+        .funcText{
+            padding: 30px;
+            ul{
+                padding-left: 0px;
+                li{
+                    font-size: 1em;
+                }
+            }
+
+        }
+    }
+    #contacto{
+        .stripe{
+            background-image: none;
+        }
+        .sidebarMenu{
+            padding-left: 0px;
+        }
+    }
+    footer{
+        text-align: center;
+        .socialButtons{
+            text-align: center;
+            padding-left: 0px;
+        }
+    }
+}
+@media screen and (max-width: 320px){
+    #home{
+        .smartphone{                        
+            width: 100%;
+            height: auto !important;
+        }
+    }
+    #metodos {
+        .metodo{
+            a{
+                min-height: 200px;
+            }
+        }
+    }
+    #servicios{
+        .bigBlue{
+            font-size: 12px;
+        }
+        .serv{
+            img{
+                height: 100px;
+            }
+        }
+    }
+}
