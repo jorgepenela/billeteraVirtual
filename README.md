@@ -6,4 +6,6 @@
 <p>Creatividad : Jimena Polleschi</p>
 <p>Front-End: Jorge Penela</p>
 
+<h2>Tecnologías: Illustrator, React, SCSS, SVG animations, After Effects</h2>
+
 <p><a href="https://yopitpago.com">Ver online</a></p>
